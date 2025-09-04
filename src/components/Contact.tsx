@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Bike, Code, Lightbulb } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Mail, Phone, MapPin, Bike, Code, Lightbulb, Send } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -65,43 +68,107 @@ const Contact = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-8">Hobbies & Interests</h3>
-            <div className="space-y-4">
-              <Card className="border-primary/20 hover:border-primary/40 transition-smooth">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <Bike className="h-8 w-8 text-primary" />
-                    <div>
-                      <h4 className="font-semibold">Riding Bikes</h4>
-                      <p className="text-muted-foreground text-sm">Exploring the world on two wheels</p>
-                    </div>
+            <h3 className="text-2xl font-bold mb-8">Send a Message</h3>
+            <Card className="border-primary/20">
+              <CardContent className="p-6">
+                <form action="https://formspree.io/f/mrblnvgp" method="POST" className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name</Label>
+                    <Input 
+                      id="name" 
+                      name="name" 
+                      placeholder="Your full name" 
+                      required
+                      className="border-primary/20 focus:border-primary"
+                    />
                   </div>
-                </CardContent>
-              </Card>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input 
+                      id="email" 
+                      name="email" 
+                      type="email" 
+                      placeholder="your@email.com" 
+                      required
+                      className="border-primary/20 focus:border-primary"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="subject">Subject</Label>
+                    <Input 
+                      id="subject" 
+                      name="subject" 
+                      placeholder="Project inquiry, collaboration, etc." 
+                      required
+                      className="border-primary/20 focus:border-primary"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea 
+                      id="message" 
+                      name="message" 
+                      placeholder="Tell me about your project or how we can work together..." 
+                      rows={5}
+                      required
+                      className="border-primary/20 focus:border-primary resize-none"
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full gradient-primary hover:opacity-90 transition-smooth text-white border-0"
+                  >
+                    <Send className="mr-2 h-5 w-5" />
+                    Send Message
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+            
+            <div className="mt-8">
+              <h3 className="text-xl font-bold mb-6">Hobbies & Interests</h3>
+              <div className="space-y-4">
+                <Card className="border-primary/20 hover:border-primary/40 transition-smooth">
+                  <CardContent className="p-4">
+                    <div className="flex items-center space-x-4">
+                      <Bike className="h-6 w-6 text-primary" />
+                      <div>
+                        <h4 className="font-semibold text-sm">Riding Bikes</h4>
+                        <p className="text-muted-foreground text-xs">Exploring the world on two wheels</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
 
-              <Card className="border-primary/20 hover:border-primary/40 transition-smooth">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <Lightbulb className="h-8 w-8 text-primary" />
-                    <div>
-                      <h4 className="font-semibold">Exploring New Technologies</h4>
-                      <p className="text-muted-foreground text-sm">Always learning and staying current</p>
+                <Card className="border-primary/20 hover:border-primary/40 transition-smooth">
+                  <CardContent className="p-4">
+                    <div className="flex items-center space-x-4">
+                      <Lightbulb className="h-6 w-6 text-primary" />
+                      <div>
+                        <h4 className="font-semibold text-sm">Exploring New Technologies</h4>
+                        <p className="text-muted-foreground text-xs">Always learning and staying current</p>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
 
-              <Card className="border-primary/20 hover:border-primary/40 transition-smooth">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <Code className="h-8 w-8 text-primary" />
-                    <div>
-                      <h4 className="font-semibold">Building Side Projects</h4>
-                      <p className="text-muted-foreground text-sm">Creating innovative solutions in my free time</p>
+                <Card className="border-primary/20 hover:border-primary/40 transition-smooth">
+                  <CardContent className="p-4">
+                    <div className="flex items-center space-x-4">
+                      <Code className="h-6 w-6 text-primary" />
+                      <div>
+                        <h4 className="font-semibold text-sm">Building Side Projects</h4>
+                        <p className="text-muted-foreground text-xs">Creating innovative solutions in my free time</p>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>

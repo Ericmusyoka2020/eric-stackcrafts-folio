@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Github, ExternalLink } from "lucide-react";
+import profilePicture from "@/assets/profile-picture.png";
 
 const Hero = () => {
   return (
@@ -15,6 +16,17 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col items-center mb-8">
+            <div className="relative mb-8">
+              <img 
+                src={profilePicture} 
+                alt="Eric Musyoka Thyaka - Software Developer"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-primary/30 shadow-2xl object-cover"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-transparent"></div>
+            </div>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="text-gradient">Eric Musyoka</span>
             <br />
