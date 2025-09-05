@@ -1,40 +1,47 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
     {
+      id: "loan-site",
       title: "Loan Site - Quick & Secure Loan Solutions",
       description: "A comprehensive loan application platform with secure payment integration and user-friendly interface.",
       url: "https://loanglobe-stk-pay.vercel.app",
       tech: ["React", "Node.js", "Payment Integration"]
     },
     {
+      id: "clinic-booking",
       title: "Clinic Booking Site - Book Your Appointment",
       description: "Modern healthcare appointment booking system with real-time availability and patient management.",
       url: "https://stackcraft.netlify.app",
       tech: ["React", "UI/UX Design", "Booking System"]
     },
     {
+      id: "music-downloader",
       title: "Music Downloader - Your Favorite Music Downloader",
       description: "Intuitive music download application with search functionality and high-quality audio output.",
       url: "https://aquamarine-treacle-b17bb8.netlify.app",
       tech: ["JavaScript", "API Integration", "Audio Processing"]
     },
     {
+      id: "gps-tracking",
       title: "GPS Tracking - Speed & Distance Tracker",
       description: "Real-time GPS tracking application for monitoring speed, distance, and location data.",
       url: "https://globetrak.netlify.app",
       tech: ["GPS API", "React", "Real-time Data"]
     },
     {
+      id: "video-downloader",
       title: "Video Downloader - Download Videos Fast",
       description: "High-performance video downloading tool with support for multiple formats and platforms.",
       url: "https://streamsaver1.netlify.app",
       tech: ["JavaScript", "Video Processing", "File Management"]
     },
     {
+      id: "web-solutions",
       title: "Web Development Solutions - Design Services",
       description: "Professional web development and graphic design portfolio showcasing creative solutions.",
       url: "https://ericstackcrafts.netlify.app",
@@ -77,15 +84,16 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="mt-auto">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full border-primary/20 hover:bg-primary/10"
-                    onClick={() => window.open(project.url, '_blank')}
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    View Live Site
-                  </Button>
+                  <Link to={`/project/${project.id}`}>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full border-primary/20 hover:bg-primary/10"
+                    >
+                      <ArrowRight className="mr-2 h-4 w-4" />
+                      View Details
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
