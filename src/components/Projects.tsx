@@ -72,7 +72,7 @@ const Projects = () => {
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col h-full">
+              <CardContent className="flex flex-col justify-between h-full">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
                     <span 
@@ -83,19 +83,19 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="mt-auto">
-                  <Link to={`/project/${project.id}`}>
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="w-full border-primary/20 hover:bg-primary/10"
-                    >
-                      <ArrowRight className="mr-2 h-4 w-4" />
-                      View Details
-                    </Button>
-                  </Link>
-                </div>
               </CardContent>
+              <div className="p-6 pt-0 mt-auto">
+                <Link to={`/project/${project.id}`}>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full border-primary/20 hover:bg-primary/10"
+                  >
+                    <ArrowRight className="mr-2 h-4 w-4" />
+                    View Details
+                  </Button>
+                </Link>
+              </div>
             </Card>
           ))}
         </div>
