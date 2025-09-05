@@ -73,15 +73,30 @@ const Projects = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col justify-between h-full">
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, techIndex) => (
+                      <span 
+                        key={techIndex}
+                        className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mb-6">
+                    <p className="text-sm text-muted-foreground break-all">
+                      <span className="font-medium">URL: </span>
+                      <a 
+                        href={project.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors"
+                      >
+                        {project.url}
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </CardContent>
               <div className="p-6 pt-0 mt-auto">
