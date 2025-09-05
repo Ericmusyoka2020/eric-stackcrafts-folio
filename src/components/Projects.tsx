@@ -1,7 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ExternalLink } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -99,18 +97,6 @@ const Projects = () => {
                   </div>
                 </div>
               </CardContent>
-              <div className="p-6 pt-0 mt-auto">
-                <Link to={`/project/${project.id}`}>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full border-primary/20 hover:bg-primary/10"
-                  >
-                    <ArrowRight className="mr-2 h-4 w-4" />
-                    View Details
-                  </Button>
-                </Link>
-              </div>
             </Card>
           ))}
         </div>
