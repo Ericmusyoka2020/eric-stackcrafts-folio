@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Code, Target } from "lucide-react";
+import { Code, Target, Award } from "lucide-react";
 
 const About = () => {
   return (
@@ -33,10 +33,10 @@ const About = () => {
             <Card className="border-primary/20 hover:border-primary/40 transition-smooth">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <GraduationCap className="h-8 w-8 text-primary mt-1" />
+                  <Code className="h-8 w-8 text-primary mt-1" />
                   <div>
-                    <h4 className="text-xl font-semibold mb-2">Degree in Software Engineering</h4>
-                    <p className="text-muted-foreground">Nairobi University</p>
+                    <h4 className="text-xl font-semibold mb-2">Diploma in Software Engineering</h4>
+                    <p className="text-muted-foreground">Kise College</p>
                   </div>
                 </div>
               </CardContent>
@@ -45,10 +45,10 @@ const About = () => {
             <Card className="border-primary/20 hover:border-primary/40 transition-smooth">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <Code className="h-8 w-8 text-primary mt-1" />
+                  <Award className="h-8 w-8 text-primary mt-1" />
                   <div>
-                    <h4 className="text-xl font-semibold mb-2">Diploma in Software Engineering</h4>
-                    <p className="text-muted-foreground">Kise College</p>
+                    <h4 className="text-xl font-semibold mb-2">Full-Stack Development</h4>
+                    <p className="text-muted-foreground">Specialized in modern web technologies and scalable architectures</p>
                   </div>
                 </div>
               </CardContent>
