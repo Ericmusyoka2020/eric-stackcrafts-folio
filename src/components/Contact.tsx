@@ -4,8 +4,23 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Bike, Code, Lightbulb, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for reaching out. I'll get back to you soon!",
+    });
+    
+    form.reset();
+  };
   return (
     <section className="py-20 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
@@ -71,7 +86,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold mb-8">Send a Message</h3>
             <Card className="border-primary/20">
               <CardContent className="p-6">
-                <form action="https://formspree.io/f/mrblnvgp" method="POST" className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
                     <Input 

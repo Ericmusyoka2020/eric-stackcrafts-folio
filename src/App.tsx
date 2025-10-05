@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import ProjectDetail from "./components/ProjectDetail";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const Portfolio = () => (
     <Skills />
     <Projects />
     <Contact />
+    <Footer />
   </div>
 );
 
