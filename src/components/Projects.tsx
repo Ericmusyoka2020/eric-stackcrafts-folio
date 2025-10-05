@@ -44,6 +44,13 @@ const Projects = () => {
       description: "Professional web development and graphic design portfolio showcasing creative solutions.",
       url: "https://ericstackcrafts.netlify.app",
       tech: ["Full Stack", "Web Design", "Portfolio"]
+    },
+    {
+      id: "bricon-civil",
+      title: "Bricon - Build Vision Civil Engineering Services",
+      description: "Professional civil engineering services platform connecting clients with expert engineers for construction projects.",
+      url: "https://bricon-build-vision.vercel.app",
+      tech: ["React", "Civil Engineering", "Service Platform"]
     }
   ];
 
