@@ -71,13 +71,17 @@ const Contact = () => {
             </div>
 
             <div className="flex space-x-4">
-              <Button size="lg" className="gradient-primary hover:opacity-90 transition-smooth text-white border-0">
-                <Mail className="mr-2 h-5 w-5" />
-                Send Email
+              <Button asChild size="lg" className="gradient-primary hover:opacity-90 transition-smooth text-white border-0">
+                <a href="mailto:ericmusyoka17@gmail.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Send Email
+                </a>
               </Button>
-              <Button variant="outline" size="lg" className="border-primary/20 hover:bg-primary/10">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Me
+              <Button asChild variant="outline" size="lg" className="border-primary/20 hover:bg-primary/10">
+                <a href="tel:0756225185">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Me
+                </a>
               </Button>
             </div>
           </div>

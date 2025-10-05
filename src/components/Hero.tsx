@@ -43,13 +43,17 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="gradient-primary hover:opacity-90 transition-smooth text-white border-0 px-8 py-6">
-              <Mail className="mr-2 h-5 w-5" />
-              Get In Touch
+            <Button asChild size="lg" className="gradient-primary hover:opacity-90 transition-smooth text-white border-0 px-8 py-6">
+              <a href="mailto:ericmusyoka17@gmail.com">
+                <Mail className="mr-2 h-5 w-5" />
+                Get In Touch
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="border-primary/20 hover:bg-primary/10 px-8 py-6">
-              <Github className="mr-2 h-5 w-5" />
-              View Projects
+            <Button asChild variant="outline" size="lg" className="border-primary/20 hover:bg-primary/10 px-8 py-6">
+              <a href="https://github.com/ericmusyoka" target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-5 w-5" />
+                View Projects
+              </a>
             </Button>
           </div>
           
