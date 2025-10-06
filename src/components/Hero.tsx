@@ -50,7 +50,7 @@ const Hero = () => {
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-primary/20 hover:bg-primary/10 px-8 py-6">
-              <a href="https://github.com/ericmusyoka" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Ericmusyoka2020" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 View Projects
               </a>

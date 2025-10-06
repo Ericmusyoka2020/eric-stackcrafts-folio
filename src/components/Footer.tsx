@@ -44,7 +44,7 @@ const Footer = () => {
             © {currentYear} Eric Musyoka Thyaka. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="https://github.com/ericmusyoka" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
+            <a href="https://github.com/Ericmusyoka2020" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
               <Github className="h-5 w-5" />
             </a>
             <a href="https://www.linkedin.com/in/eric-bughunter-05742137a" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
