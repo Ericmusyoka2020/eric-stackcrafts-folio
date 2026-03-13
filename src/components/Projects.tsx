@@ -8,42 +8,48 @@ const Projects = () => {
       title: "Loan Site - Quick & Secure Loan Solutions",
       description: "A comprehensive loan application platform with secure payment integration and user-friendly interface.",
       url: "https://loanglobe-stk-pay.vercel.app",
-      tech: ["React", "Node.js", "Payment Integration"]
+      tech: ["React", "Node.js", "Payment Integration"],
+      color: "tech-blue"
     },
     {
       id: "clinic-booking",
       title: "Clinic Booking Site - Book Your Appointment",
       description: "Modern healthcare appointment booking system with real-time availability and patient management.",
       url: "https://stackcraft.netlify.app",
-      tech: ["React", "UI/UX Design", "Booking System"]
+      tech: ["React", "UI/UX Design", "Booking System"],
+      color: "tech-green"
     },
     {
       id: "music-downloader",
       title: "Music Downloader - Your Favorite Music Downloader",
       description: "Intuitive music download application with search functionality and high-quality audio output.",
       url: "https://aquamarine-treacle-b17bb8.netlify.app",
-      tech: ["JavaScript", "API Integration", "Audio Processing"]
+      tech: ["JavaScript", "API Integration", "Audio Processing"],
+      color: "tech-purple"
     },
     {
       id: "gps-tracking",
       title: "GPS Tracking - Speed & Distance Tracker",
       description: "Real-time GPS tracking application for monitoring speed, distance, and location data.",
       url: "https://globetrak.netlify.app",
-      tech: ["GPS API", "React", "Real-time Data"]
+      tech: ["GPS API", "React", "Real-time Data"],
+      color: "tech-orange"
     },
     {
       id: "video-downloader",
       title: "Video Downloader - Download Videos Fast",
       description: "High-performance video downloading tool with support for multiple formats and platforms.",
       url: "https://streamsaver1.netlify.app",
-      tech: ["JavaScript", "Video Processing", "File Management"]
+      tech: ["JavaScript", "Video Processing", "File Management"],
+      color: "tech-blue"
     },
     {
       id: "web-solutions",
       title: "Web Development Solutions - Design Services",
       description: "Professional web development and graphic design portfolio showcasing creative solutions.",
       url: "https://ericstackcrafts.netlify.app",
-      tech: ["Full Stack", "Web Design", "Portfolio"]
+      tech: ["Full Stack", "Web Design", "Portfolio"],
+      color: "tech-purple"
     },
     {
       id: "bricon-civil",
